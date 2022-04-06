@@ -8,7 +8,7 @@ iHoover test for Yanport application
 
 **Input datas :**
 
--   Dimensions of the grid (room to clean) : Number of squares of X axe and number of squares of Y axe ;
+-   Dimensions of the grid (room to clean) : Number of squares on X axe and number of squares on Y axe ;
 -   Initial position of the hoover : Position on axe X and on axe Y ;
 -   Initial orientation of the hoover : N, E, S or W ;
 -   Instructions for movements fo the hoover : Sequence of letters A (go ahead), D (rotate right) and G (rotate left).
@@ -36,12 +36,14 @@ $ npm t
 
 ## Test 1
 
-Input datas :
+**Input datas :**
 
--   Grid dimension : x=10 y=10
--   Initia position of the hoover : x=5 y=5 orientation=N
--   Instructions : DADADADAA
-    Output datas :
--   Expected result : x=5 y=6 orientation=N
+-   Grid dimension : x=10 y=10 ;
+-   Initial position of the hoover : x=5 y=5 orientation=N ;
+-   Instructions : DADADADAA.
+
+**Output datas :**
+
+-   Expected result : x=5 y=6 orientation=N.
 
 Test 1 is executed on the last test in the unit test file (app.test.ts).
