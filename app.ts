@@ -1,5 +1,5 @@
 //* When "A" instruction (go ahead)
-function Avance(intX: number, intY: number, intO: string) {
+function Avance(intX: number, intY: number, intO: string): any {
 	if (intO === "N") {
 		return { x: intX, y: intY + 1, O: intO };
 	} else if (intO === "E") {
@@ -12,7 +12,7 @@ function Avance(intX: number, intY: number, intO: string) {
 }
 
 //* When "G" instruction (rotate to left)
-function Gauche(intX, intY, intO) {
+function Gauche(intX: number, intY: number, intO: string): any {
 	if (intO === "N") {
 		return { x: intX, y: intY, O: "W" };
 	} else if (intO === "E") {
@@ -25,7 +25,7 @@ function Gauche(intX, intY, intO) {
 }
 
 //* When "D" instruction (rotate to right)
-function Droite(intX: number, intY: number, intO: string) {
+function Droite(intX: number, intY: number, intO: string): any {
 	if (intO === "N") {
 		return { x: intX, y: intY, O: "E" };
 	} else if (intO === "E") {
@@ -54,7 +54,7 @@ function checkOverGrid(intX: number, intY: number, squareX: number, squareY: num
 	}
 }
 
-// Execute all instructions
+//* Execute all instructions
 function Drive(
 	squareX: number,
 	squareY: number,
@@ -68,7 +68,7 @@ function Drive(
 	var intY: number = initY; // y intermediaite
 	var intO: string = initO; // Orientation intermediaite
 	const instructTable: string[] = instruct.split(""); //Details of instructions
-	var position: { x: number; y: number; O: string } = { x: initX, y: initY, O: initO };
+	var position: { x: number; y: number; O: string } = { x: intX, y: intY, O: intO };
 	var positionAfterCheck: { x: number; y: number } = { x: initX, y: initY };
 
 	for (let i = 0; i < instructQty; i++) {
